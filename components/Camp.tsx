@@ -50,11 +50,11 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
 
 const Camp = () => {
   return (
-    <section className="2xl:max-container relative flex flex-col py-10 lg:py-16 xl:pb-12 px-6 lg:px-20">
-      <div className="mb-8 lg:mb-10">
+    <section className="2xl:max-container relative flex flex-col py-10 lg:py-20 xl:pb-20 px-6 lg:px-20">
+      <div className="mb-10 lg:mb-14">
         <h2 className="bold-40 lg:bold-64 text-gray-90">Choose Your Next Destination</h2>
       </div>
-      <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px] pb-8">
+      <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px] pb-10">
         <CampSite 
           backgroundImage="bg-bg-img-1"
           title="Putuk Truno Camp"
@@ -69,7 +69,7 @@ const Camp = () => {
         />
       </div>
 
-      <div className="flex justify-end mt-6 lg:mt-0 lg:-mt-48 lg:mr-6">
+      <div className="flex justify-end mt-10 lg:mt-0 lg:-mt-52">
         <div className="bg-green-50 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-2xl hover:scale-105 transform z-20 group">
           <h2 className="regular-24 md:regular-32 2xl:regular-64 capitalize text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
             <strong>Explore with Confidence</strong>
