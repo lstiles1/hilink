@@ -4,11 +4,11 @@ import Image from 'next/image'
 
 const GetApp = () => {
   return (
-    <section className="flexCenter w-full flex-col pb-[100px]">
+    <section className="flexCenter w-full flex-col pb-[100px] transition-all duration-500">
       <div className="get-app">
-        <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
-          <h2 className="bold-40 lg:bold-64 xl:max-w-[320px]">Get for free now!</h2>
-          <p className="regular-16 text-gray-10">Available on iOS and Android</p>
+        <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12 group">
+          <h2 className="bold-40 lg:bold-64 xl:max-w-[320px] transition-colors duration-300 group-hover:text-green-50">Download Hilink Today</h2>
+          <p className="regular-16 text-gray-10 transition-colors duration-300 group-hover:text-white">Start exploring now on iOS and Android</p>
           <div className="flex w-full flex-col gap-3 whitespace-nowrap xl:flex-row">
             <Button 
               type="button"
@@ -27,8 +27,8 @@ const GetApp = () => {
           </div>
         </div>
 
-        <div className="flex flex-1 items-center justify-end">
-          <Image src="/phones.png" alt="phones" width={550} height={870} />
+        <div className="flex flex-1 items-center justify-end transition-transform duration-500 hover:scale-105">
+          <Image src="/phones.png" alt="phones" width={550} height={870} className="rounded-3xl lg:rounded-5xl transition-all duration-300" />
         </div>
       </div>
     </section>

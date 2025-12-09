@@ -16,19 +16,19 @@ body {
 
 @layer utilities {
   .btn_white { 
-    @apply  border-white bg-white px-8 py-3 text-green-50
+    @apply  border-white bg-white px-8 py-3 text-green-50 hover:bg-gray-10 transition-all
   }
   .btn_white_text  { 
-    @apply  border-white bg-white px-8 py-3 text-gray-90
+    @apply  border-white bg-white px-8 py-3 text-gray-90 hover:bg-gray-10 transition-all
   }
   .btn_green  { 
-    @apply  border-green-50 bg-green-50 px-8 py-5 text-white
+    @apply  border-green-50 bg-green-50 px-8 py-5 text-white hover:bg-green-90 transition-all shadow-md hover:shadow-lg
   }
   .btn_dark_green { 
     @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
   }
   .btn_dark_green_outline  { 
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+    @apply border-gray-20 bg-green-90 px-8 py-5 text-white transition-all hover:border-green-50 hover:bg-green-50
   }
   
   .max-container {
@@ -53,6 +53,69 @@ body {
 
   .flexEnd {
     @apply flex items-center justify-end;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .animate-slideInUp {
+    animation: slideInUp 0.8s ease-in-out;
+  }
+
+  .animate-slideInDown {
+    animation: slideInDown 0.6s ease-in-out;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
   }
 
   /* FONTS */
@@ -141,7 +204,7 @@ body {
 
   /* Get App */
   .get-app {
-    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] rounded-3xl lg:rounded-5xl;
   }
 }
 

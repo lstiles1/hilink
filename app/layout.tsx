@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Travel',
-  description: 'Travel UI/UX App for Camping',
+  title: 'Hilink',
+  description: 'Travel the world with Hilink - Your ultimate travel companion app for seamless bookings, personalized itineraries, and unforgettable experiences.',
 }
 
 export default function RootLayout({
