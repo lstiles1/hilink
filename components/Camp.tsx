@@ -11,10 +11,10 @@ interface CampProps {
 
 const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps) => {
   return (
-    <div className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat rounded-3xl lg:rounded-5xl transition-all duration-300 hover:shadow-2xl overflow-hidden group relative`}>
+    <div className={`h-full w-full min-w-[1100px] ${backgroundImage} bg-cover bg-no-repeat rounded-3xl lg:rounded-5xl transition-all duration-300 overflow-hidden group relative`}>
      <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10 relative z-10">
       <div className="flexCenter gap-4 transition-transform duration-300 group-hover:translate-y-[-4px]">
-        <div className="rounded-full bg-green-50 p-4 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+        <div className="rounded-full bg-green-50 p-4 transition-all duration-300 group-hover:scale-110">
           <Image
             src="/folded-map.svg"
             alt="map"
@@ -22,7 +22,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
             height={28}
           />
         </div>
-        <div className="flex flex-col gap-1 drop-shadow-lg">
+        <div className="flex flex-col gap-1">
           <h4 className="bold-18 text-white transition-colors duration-300 group-hover:text-yellow-50 font-bold">{title}</h4>
           <p className="regular-14 text-white/90">{subtitle}</p>
         </div>
@@ -32,7 +32,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
         <span className="flex -space-x-4 overflow-hidden">
           {PEOPLE_URL.map((url) => (
             <Image 
-              className="inline-block h-10 w-10 rounded-full border-2 border-white shadow-md transition-transform duration-300 hover:scale-110 hover:z-20"
+              className="inline-block h-10 w-10 rounded-full border-2 border-white transition-transform duration-300 hover:scale-110 hover:z-20"
               src={url}
               key={url}
               alt="person"
@@ -41,7 +41,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
             />
           ))}
         </span>
-        <p className="bold-16 md:bold-20 text-white drop-shadow-lg font-bold">{peopleJoined}</p>
+        <p className="bold-16 md:bold-20 text-white font-bold">{peopleJoined}</p>
       </div>
      </div>
     </div>
@@ -69,12 +69,12 @@ const Camp = () => {
         />
       </div>
 
-      <div className="flex justify-end mt-10 lg:mt-0 lg:-mt-52">
-        <div className="bg-green-50 p-8 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-16 xl:py-20 relative w-full overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-2xl hover:scale-105 transform z-20 group">
+      <div className="flex justify-end mt-8 lg:-mt-48">
+        <div className="bg-green-50 p-6 lg:max-w-[500px] xl:max-w-[734px] xl:rounded-5xl xl:px-14 xl:py-16 relative w-full overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-2xl hover:scale-105 transform z-20 group">
           <h2 className="regular-24 md:regular-32 2xl:regular-64 capitalize text-white transition-transform duration-300 group-hover:translate-y-[-2px]">
             <strong>Explore with Confidence</strong>
           </h2>
-          <p className="regular-14 xl:regular-16 mt-5 text-white/95 transition-colors duration-300 group-hover:text-white">
+          <p className="regular-14 xl:regular-16 mt-3 text-white/95 transition-colors duration-300 group-hover:text-white">
             Never get lost again. Our offline maps and real-time navigation ensure you can explore remote wilderness with complete peace of mind. Join thousands of adventurers who trust Hilink for their journeys.
           </p>
           <Image 
